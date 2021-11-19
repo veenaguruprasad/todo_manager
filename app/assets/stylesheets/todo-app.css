@@ -84,3 +84,7 @@ body {
   color: gray;
   font-size: 0.8rem;
 }
+
+.strike-through {
+  text-decoration: line-through;
+}
