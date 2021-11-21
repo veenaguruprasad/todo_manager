@@ -10,6 +10,8 @@
       <span class="todo-date"><%= todo.due_date.to_s(:short) %></span>
     <% end %>
     </label>
-    <i class="far fa-trash-alt"></i>
+    <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+      <input class="trash-btn" type="image" src="assets/trash.svg">
+    <% end %>
   </li>
 <% end %>

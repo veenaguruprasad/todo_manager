@@ -65,11 +65,14 @@ body {
   cursor: pointer;
 }
 
-.fa-trash-alt {
+.trash-btn {
+  height: 20px;
+  width: 20px;
+  margin-left: 50px;
   visibility: hidden;
 }
 
-.todo-item:hover .fa-trash-alt {
+.todo-item:hover .trash-btn {
   visibility: visible;
   cursor: pointer;
 }

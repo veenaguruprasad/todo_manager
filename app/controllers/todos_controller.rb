@@ -1,5 +1,4 @@
 class TodosController < ApplicationController
-  skip_before_action :verify_authenticity_token
 
   def index
     render "index"
@@ -23,6 +22,13 @@ class TodosController < ApplicationController
     text = params[:todo_text]
     date = DateTime.parse(params[:due_date])
     todo = Todo.create!(todo_text: text, due_date: date, completed: false)
+    redirect_to todos_path
+  end
+
+  def destroy
+    id = params[:id]
+    todo = Todo.find(id)
+    todo.destroy
     redirect_to todos_path
   end
 end
