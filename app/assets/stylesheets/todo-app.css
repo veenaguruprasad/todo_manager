@@ -5,7 +5,7 @@ body {
 }
 
 .heading {
-  font-size: 32px;
+  font-size: 26px;
   margin: 30px 0;
 }
 
@@ -34,12 +34,12 @@ body {
 }
 
 .due-heading {
-  font-size: 22px;
+  font-size: 18px;
   margin: 20px 0 0 0;
 }
 
 .number-of-items {
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(92, 92, 92);
   margin: 0 20px;
 }
