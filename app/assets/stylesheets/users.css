@@ -1,0 +1,22 @@
+.user-form-row {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-input {
+  border: solid rgb(182, 181, 181) 1px;
+  padding: 10px;
+}
+
+.user-label {
+  margin: 0 10px;
+}
+
+.add-btn {
+  border: none;
+  color: white;
+  background-color: rgb(63, 228, 63);
+  padding: 10px 30px;
+  cursor: pointer;
+}

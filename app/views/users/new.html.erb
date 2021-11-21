@@ -1,0 +1,27 @@
+<h1 class="heading">Welcome, New User!</h1>
+
+<section class="new-users-form">
+  <%= form_with url: users_path do |form| %>
+    <div class="user-form-row">
+      <label class="user-label">First name:</label>
+      <%= form.text_field :first_name, class: "user-input" %>
+    </div>
+
+    <div class="user-form-row">
+      <label class="user-label">Last name:</label>
+      <%= form.text_field :last_name, class: "user-input" %>
+    </div>
+
+    <div class="user-form-row">
+      <label class="user-label">Email:</label>
+      <%= form.email_field :email, class: "user-input" %>
+    </div>
+
+    <div class="user-form-row">
+      <label class="user-label">Password:</label>
+      <%= form.password_field :password, class: "user-input" %>
+    </div>
+
+    <%= form.submit "Sign Up!", class: "form-submit" %>
+  <% end %>
+</section>
