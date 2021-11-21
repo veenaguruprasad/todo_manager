@@ -16,14 +16,13 @@ class TodosController < ApplicationController
     todo = Todo.find(id)
     todo.completed = completed
     todo.save!
-    text = "Update todo completed status to #{completed}"
-    render plain: text
+    redirect_to todos_path
   end
 
   def create
     text = params[:todo_text]
     date = DateTime.parse(params[:due_date])
     todo = Todo.create!(todo_text: text, due_date: date, completed: false)
-    render plain: "Hey, Your new todo is created with the id #{todo.id}!"
+    redirect_to todos_path
   end
 end
