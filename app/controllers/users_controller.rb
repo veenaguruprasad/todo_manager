@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     email = params[:email]
     password = params[:password]
     user = User.create!(first_name: first_name, last_name: last_name, email: email, password: password)
+    session[:current_user_id] = user.id
     redirect_to "/"
   end
 end
