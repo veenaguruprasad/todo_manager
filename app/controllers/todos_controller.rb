@@ -5,11 +5,6 @@ class TodosController < ApplicationController
     render "index"
   end
 
-  # def show
-  #   id = params[:id]
-  #   render plain: Todo.find(id).to_displayable_string
-  # end
-
   def update
     id = params[:id]
     completed = params[:completed]
@@ -21,9 +16,14 @@ class TodosController < ApplicationController
 
   def create
     text = params[:todo_text]
-    date = DateTime.parse(params[:due_date])
-    todo = Todo.create!(todo_text: text, due_date: date, completed: false, user_id: current_user.id)
-    redirect_to todos_path
+    date = params[:due_date]
+    todo = Todo.new(todo_text: text, due_date: date, completed: false, user_id: current_user.id)
+    if todo.save
+      redirect_to todos_path
+    else
+      flash[:error] = todo.errors.full_messages.join(", ")
+      redirect_to todos_path
+    end
   end
 
   def destroy
