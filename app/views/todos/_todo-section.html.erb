@@ -1,17 +1,20 @@
 <h3 class="due-heading"><%= section_title %> <span class="number-of-items"><%= todos.completed.count %>/<%= todos.count %></span></h3>
 <ul>
-<% todos.all.each do |todo| %>
-  <li class="todo-item">
-    <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-      <input class="todo-checkbox" type="checkbox" name="completed" <%= todo.completed ? 'checked' : '' %> onclick="this.form.submit()">
-    <% end %>
-    <label class="todo-label <%= todo.completed ? 'strike-through' : '' %>"> <%= todo.todo_text %>
-    <% if show_due_date %>
-      <span class="todo-date"><%= todo.due_date.to_s(:short) %></span>
-    <% end %>
-    </label>
-    <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-      <input class="trash-btn" type="image" src="assets/trash.svg">
-    <% end %>
-  </li>
-<% end %>
+  <% todos.all.each do |todo| %>
+    <li class="todo-item">
+      <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+        <%= check_box_tag "completed", nil, todo.completed, :onclick => "this.form.submit()", :class => "todo-checkbox" %>
+      <% end %>
+
+      <label class="todo-label <%= todo.completed ? 'strike-through' : '' %>"> <%= todo.todo_text %>
+        <% if show_due_date %>
+          <span class="todo-date"><%= todo.due_date.to_s(:short) %></span>
+        <% end %>
+      </label>
+
+      <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+        <%= image_submit_tag("trash.svg", class: 'trash-btn') %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
