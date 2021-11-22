@@ -4,7 +4,7 @@
   <%= form_with url: users_path do |form| %>
     <div class="user-form-row">
       <label class="user-label">First name:</label>
-      <%= form.text_field :first_name, class: "user-input" %>
+      <%= form.text_field :first_name, class: "user-input", :autofocus => true %>
     </div>
 
     <div class="user-form-row">

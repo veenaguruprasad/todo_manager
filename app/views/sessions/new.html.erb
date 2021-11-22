@@ -4,7 +4,7 @@
   <%= form_with url: session_path do |form| %>
     <div class="user-form-row">
       <label class="user-label">Email:</label>
-      <%= form.email_field :email, class: "user-input" %>
+      <%= form.email_field :email, class: "user-input", :autofocus => true %>
     </div>
 
     <div class="user-form-row">

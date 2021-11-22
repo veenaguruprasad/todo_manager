@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a todo manager application made by Dr. Veena Guruprasad N for WD201 by Pupilfirst School as a part of Lite teacher certification.
 
-Things you may want to cover:
+The application is live at https://veena-todos.herokuapp.com/
 
-* Ruby version
+Username: wd201@pupil.com
+Password: test
+These credentials can be used for testing the application
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Screenshots can be found in the 'wd201 screenshots' folder.

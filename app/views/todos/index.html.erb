@@ -1,7 +1,7 @@
 <h1 class="heading">My Todo-list</h1>
 
 <%= form_with(url: "/todos", method: "post", class: "input-section") do %>
-  <%= text_field_tag :todo_text, "", placeholder: "What's next?", class: "todo-text-input" %>
+  <%= text_field_tag :todo_text, "", placeholder: "What's next?", class: "todo-text-input", :autofocus => true %>
   <%= date_field_tag 'due_date', class: "due-date-input" %>
   <%= button_tag 'Add', class:"add-btn" %>
 <% end %>

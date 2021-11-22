@@ -82,12 +82,13 @@ body {
   font-size: 0.8rem;
 }
 
+.strike-through {
+  text-decoration: line-through;
+}
+
 .todo-date {
   color: rgb(92, 92, 92);
   color: gray;
   font-size: 0.8rem;
-}
-
-.strike-through {
-  text-decoration: line-through;
+  text-decoration: none !important;
 }
